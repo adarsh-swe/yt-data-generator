@@ -1,0 +1,77 @@
+<html lang="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Social Media Meta Generator</title>
+		<link rel="stylesheet" href="/styles.css" />
+	</head>
+	<body>
+		<nav>
+			<h1 id="title">YouTube Video Data Generator</h1>
+		</nav>
+
+		<div class="container">
+			<div class="media-selector">
+				<button type="button">
+					<img
+						src="./img/yt_logo.png"
+						id="YouTube"
+						alt="YouTube Logo"
+					/>
+				</button>
+				<button type="button">
+					<img
+						src="./img/tiktok_logo.png"
+						id="TikTok"
+						alt="YouTube Logo"
+					/>
+				</button>
+				<button type="button">
+					<img
+						src="./img/ig_logo.png"
+						id="instagram"
+						alt="YouTube Logo"
+					/>
+				</button>
+			</div>
+			<form id="form" class="meta-form">
+				<h2>Generate Meta Data</h2>
+				<label for="title">
+					<span>Video Title:</span>
+					<input type="text" name="title" />
+					<button>generate meta data</button>
+				</label>
+			</form>
+
+			<div class="description">
+				<p>Your Video Description...</p>
+			</div>
+			<div class="tags">
+				<p>Your Video Tags...</p>
+			</div>
+
+			<form id="form2" class="image-form">
+				<h2>Generate Thumbnail Image</h2>
+				<label for="image">
+					<span>Describe the image</span>
+					<input type="text" name="prompt" />
+					<button>generate thumbnail</button>
+				</label>
+			</form>
+
+			<div class="thumbnail">
+				<img src="https://place-hold.it/512x512" alt="thumbnail" />
+			</div>
+		</div>
+		<!-- end container -->
+
+		<script src="/index.js"></script>
+	</body>
+</html>
