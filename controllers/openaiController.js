@@ -1,14 +1,27 @@
 const openai = require("../config/openaiConfig");
 
 const generateMeta = async (req, res) => {
-	const { title } = req.body;
+	const { title, media } = req.body;
+	let content = "";
+
+	switch (media) {
+		case "TikTok":
+			content = `Come up with a caption for a TikTok video about ${title}`;
+			break;
+		case "instagram":
+			content = `Come up with a caption for a instagram reel about ${title}`;
+			break;
+		default:
+			content = `Come up with a description for a YouTube video called ${title}`;
+	}
+
 	try {
 		const description = await openai.createChatCompletion({
 			model: "gpt-3.5-turbo",
 			messages: [
 				{
 					role: "user",
-					content: `Come up with a description for a YouTube video called ${title}`,
+					content: content,
 				},
 			],
 			max_tokens: 100,
@@ -21,7 +34,7 @@ const generateMeta = async (req, res) => {
 			messages: [
 				{
 					role: "user",
-					content: `come up with 10 keywords for a YouTube video called ${title}`,
+					content: `come up with 10 keywords for a ${media} video called ${title}`,
 				},
 			],
 			max_tokens: 100,

@@ -40,7 +40,7 @@ metaForm.addEventListener("submit", async (e) => {
 
 	const res = await fetch("/openai/meta", {
 		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify({ title: metaForm.title.value }),
+		body: JSON.stringify({ title: metaForm.title.value, media: currMedia }),
 		method: "POST",
 	});
 	const data = await res.json();
