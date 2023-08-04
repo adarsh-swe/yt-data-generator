@@ -6,7 +6,8 @@ const {
 
 // app setup
 const app = express();
-app.listen(4000, () => console.log("listening to requests on port 4000"));
+const PORT = process.env.PORT || 8000; //PORT will be defined in process.env on heroku when deployed
+app.listen(PORT, () => console.log(`Server started on ${PORT}`));
 
 // middleware
 app.use(express.json());
