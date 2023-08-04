@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/adarsh-swe/yt-data-generator/issues"
   },
-  "homepage": "https://github.com/adarsh-swe/yt-data-generator#readme"
+  "homepage": "https://github.com/adarsh-swe/yt-data-generator#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "openai": "^3.3.0"
+  }
 }
