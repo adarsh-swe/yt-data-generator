@@ -1,3 +1,7 @@
+particlesJS.load("particles-js", "particles.json", function () {
+	console.log("particles.js loaded - callback");
+});
+
 let currMedia = "YouTube";
 
 // forms
@@ -14,6 +18,7 @@ element1.addEventListener("click", function () {
 	document.getElementById("title").innerHTML = "YouTube Video Data Generator";
 	document.getElementById("form").style.background = "#cc0000";
 	document.getElementById("form2").style.background = "#cc0000";
+	document.getElementById("particles-js").style.background = "#750c0c";
 	currMedia = "YouTube";
 });
 
@@ -22,6 +27,7 @@ element2.addEventListener("click", function () {
 	document.getElementById("title").innerHTML = "TikTok Video Data Generator";
 	document.getElementById("form").style.background = "#222";
 	document.getElementById("form2").style.background = "#222";
+	document.getElementById("particles-js").style.background = "#0a0a0a";
 	currMedia = "TikTok";
 });
 
@@ -31,6 +37,7 @@ element3.addEventListener("click", function () {
 		"instagram Video Data Generator";
 	document.getElementById("form").style.background = "#8a3ab9";
 	document.getElementById("form2").style.background = "#8a3ab9";
+	document.getElementById("particles-js").style.background = "#401957";
 	currMedia = "instagram";
 });
 
